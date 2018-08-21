@@ -1,8 +1,8 @@
-Blogimage
+# Blogimage
 
 This file is my blog image
 
-使用方法1：
+# 使用方法1：
 
 选择图片，复制图片路径，替换blob为raw
 
@@ -20,7 +20,7 @@ https://github.com/zhwill/Blogimage/blob/master/openstack1.png
 
 
 
-使用方法2：
+# 使用方法2：
 
 直接在图片上右键，复制图片路径
 
