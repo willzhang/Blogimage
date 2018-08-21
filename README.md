@@ -1,6 +1,6 @@
 # Blogimage
 
-This file is my blog image
+This folder is used to store my blog pictures！
 
 # 使用方法1：
 
