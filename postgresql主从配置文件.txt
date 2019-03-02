@@ -1,0 +1,9 @@
+
+
+/var/lib/pgsql/11/data/postgresql.conf
+listen_addresses = '*'
+wal_level = hot_standby   # 这个是设置主为wal的主机
+max_wal_senders = 10      # 这个设置了可以最多有几个流复制连接，差不多有几个从，就设置几个
+wal_keep_segments = 7     #设置流复制保留的最多的xlog数目
+wal_sender_timeout = 60s  #设置流复制主机发送数据的超时时间
+max_connections = 100     # 这个设置要注意下，从库的max_connections必须要大于主库的
