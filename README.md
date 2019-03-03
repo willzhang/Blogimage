@@ -1,12 +1,14 @@
 # Blogimage
 
-This folder is used to store my blog pictures！
+This folder is used to store blog pictures！
 
 # 使用方法1：
 
 选择图片，复制图片路径，替换blob为raw
+
 图片路径如下：
-https://github.com/willzhang/blog/blob/master/image/xxx.png
+
+https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 
 粘贴进markdown格式如下：
 
