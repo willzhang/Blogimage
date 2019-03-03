@@ -19,7 +19,7 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 示例：
 
 ```
-![图片1](https://github.com/zhwill/Blogimage/raw/master/openstack1.png)
+![img](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png)
 ```
 
 # 使用方法2：
@@ -29,7 +29,7 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 示例：
 
 ```
-![图片1](https://github.com/zhwill/Blogimage/blob/master/openstack1.png?raw=true)
+![img](https://github.com/zhwill/Blogimage/blob/master/openstack1.png?raw=true)
 ```
 
 
