@@ -6,7 +6,7 @@ This folder is used to store my blog pictures！
 
 选择图片，复制图片路径，替换blob为raw
 图片路径如下：
-https://github.com/zhwill/Blogimage/blob/master/openstack1.png
+https://github.com/willzhang/blog/blob/master/image/xxx.png
 
 粘贴进markdown格式如下：
 
