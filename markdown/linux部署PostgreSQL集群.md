@@ -81,7 +81,7 @@ ClusterControl支持以下路由软件：
 
 ClusterControl组件必须驻留在除数据库集群之外的独立节点上。 例如，如果您有一个三节点Galera集群，则应在第四个节点上安装ClusterControl。 以下是使用ClusterControl构建Galera集群的示例：
 
-![1551594417734](D:\github\blog\image\1551594417734.png)
+![image001](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png)
 
 启动cmon服务后，它会将内部/etc/cmon.cnf和/etc/cmon.d/cmon\_\*.cnf（如果存在）的所有配置选项加载到CMON数据库中。每个CMON配置文件表示具有不同群集ID的群集。它首先注册主机，收集信息，并通过SSH定期在所有受管节点上执行检查和预定作业。在ClusterControl中设置无密码SSH对于无代理管理至关重要。对于监视，可以使用无代理和基于代理的设置配置ClusterControl，有关详细信息，请参阅监视操作。
 
@@ -89,11 +89,11 @@ ClusterControl os\_user使用ssh\_identityCMON配置文件中定义的SSH密钥�
 
 用户真正需要做的是访问位于http://ClusterControl\_host/clustercontrol的ClusterControl UI 并从那里开始管理数据库集群。您可以从导入现有数据库集群开始，或者在本地或云中创建新的数据库服务器或集群。ClusterControl支持在单个ClusterControl服务器下监视多个群集和群集类型，如下图所示：
 
-![1551594437131](D:\github\blog\image\1551594437131.png)
+![image002](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image002.png)
 
 ClusterControl通过端口9500上的远程过程调用（RPC）（由RPC令牌进行身份验证），端口9501（带有TLS的RPC）和可访问的REST API http://ClusterControl\_host/cmonapi（由API token进行身份验证）公开所有功能。ClusterControl UI与这些接口交互以检索监控数据（集群负载，主机状态，警报，备份状态等）或发送管理命令（添加/删除节点，运行备份，升级集群等）。下图说明了ClusterControl的体系结构：
 
-![1551594447356](D:\github\blog\image\1551594447356.png)
+![image003](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image003.png)
 
 ClusterControl对性能影响最小，尤其是基于代理的监视设置，不会导致数据库服务器或群集停机。实际上，它会在找到失败的数据库节点或集群时执行自动恢复（如果已启用）。
 
@@ -171,7 +171,7 @@ ClusterControl能够处理维护数据库服务器或集群所需的大多数管
 -   3个HAProxy负载均衡器。
 -   在负载均衡服务器之间配置Keepalived。
 
-![1551594471084](D:\github\blog\image\1551594471084.png)
+![image004](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image004.png)
 
 节点信息：
 
@@ -237,27 +237,27 @@ http://192.168.92.10/clustercontrol
 
 点击Deploy，选择PostgreSQL，配置SSH
 
-![1551594552849](D:\github\blog\image\1551594552849.png)
+![image005](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image005.png)
 
 配置端口，创建复制用户moniuser/123456， PostgreSQL版本选择11。
 
-![1551594564503](D:\github\blog\image\1551594564503.png)
+![image006](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image006.png)
 
 配置主从节点IP
 
-![1551594571648](D:\github\blog\image\1551594571648.png)
+![image007](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image007.png)
 
 选择是否开启主从节点同步复制（同步或异步）
 
-![1551594578302](D:\github\blog\image\1551594578302.png)
+![image008](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image008.png)
 
 通过查看job观察部署进度：
 
-![1551594587074](D:\github\blog\image\1551594587074.png)
+![image009](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image009.png)
 
 等待部署完成后查看拓扑状态
 
-![1551594593459](D:\github\blog\image\1551594593459.png)
+![image010](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image010.png)
 
 ## 部署Load Balancer
 
@@ -285,11 +285,11 @@ Keepalived允许您在主动/被动服务器组中配置虚拟IP。此虚拟IP�
 
 这里在3个节点上部署haproxy，以192.168.92.11节点为例（选择群集 - \>管理 - \>负载均衡器 - \> Keepalived）。
 
-![1551594605166](D:\github\blog\image\1551594605166.png)
+![image011](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image011.png)
 
-![1551594612705](D:\github\blog\image\1551594612705.png)
+![image012](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image012.png)
 
-![1551594621263](D:\github\blog\image\1551594621263.png)
+![image013](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image013.png)
 
 依次在另外两个节点执行以上操作，完成后查看haproxy状态，用户名密码admin/admin
 
@@ -299,17 +299,17 @@ http://192.168.92.11:9600/stats
 
 要执行keepalived部署，请选择群集，转到"Manage"菜单和"Load Balancer"部分，然后选择"Keepalived"选项。
 
-!![1551594645928](D:\github\blog\image\1551594645928.png)
+![image014](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image014.png)
 
 选择3个haproxy节点，并配置虚IP和网卡。
 
 Keepalived使用虚拟IP在发生故障时将其从一个负载均衡器迁移到另一个负载均衡器，操作完成后应该具有以下拓扑：
 
-![1551594654325](D:\github\blog\image\1551594654325.png)
+![image015](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image015.png)
 
 查看haproxy
 
-![1551594661095](D:\github\blog\image\1551594661095.png)
+![image016](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image016.png)
 
 在读写端口中，将主服务器设置为在线，将其余节点设置为脱机。在只读端口中，主站和从站都是在线状态。通过这种方式，我们可以平衡节点之间的读取流量。写入时，将使用读写端口，该端口将指向主站。
 
@@ -458,7 +458,7 @@ Database cluster state:               in production
 
 在clusterclotrol web界面查看， 192.168.92.12节点升级为主库，同时原主库为failed状态：
 
-![1551594914123](D:\github\blog\image\1551594914123.png)
+![image017](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image017.png)
 
 完成后重新从psql客户端连接：
 
@@ -511,7 +511,7 @@ postgres=# select pid,state,client_addr,sync_priority,sync_state from pg_stat_re
 
 查看拓扑状态，已经连接到新主库
 
-![1551595043154](D:\github\blog\image\1551595043154.png)
+![image018](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image018.png)
 
 将原主库作为从库连接到新主库，复制一份recovery.conf配置文件到原主库节点即可
 
@@ -528,7 +528,7 @@ pg\_ctl restart
 
 查看拓扑状态，已经恢复正常：
 
-![1551595149067](D:\github\blog\image\1551595149067.png)
+![image019](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image019.png)
 
 新主库pgslave01查看备份状态
 
@@ -552,11 +552,11 @@ ClusterControl支持手动或故障时自动进行主备切换，开启30天企�
 
 这里以将slave01节点手动转为master节点为例：
 
-![1551595199116](D:\github\blog\image\1551595199116.png)
+![image020](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image020.png)
 
 查看拓扑状态，192.168.92.12节点成为master：
 
-![1551595206225](D:\github\blog\image\1551595206225.png)
+![image021](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image021.png)
 
 然后停掉192.168.92.12节点服务，模拟master故障，测试自动切换：
 
@@ -564,27 +564,27 @@ ClusterControl支持手动或故障时自动进行主备切换，开启30天企�
 
 -bash-4.2\$ pg\_ctl stop
 
-![1551595222225](D:\github\blog\image\1551595222225.png)
+![image022](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image022.png)
 
 等待几秒后192.168.92.11自动切换为master，并且slave02也正常连接到该节点：
 
-![1551595230265](D:\github\blog\image\1551595230265.png)
+![image023](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image023.png)
 
 下面将192.168.92.12作为slave节点连接到192.168.92.11
 
-![1551595237336](D:\github\blog\image\1551595237336.png)
+![image024](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image024.png)
 
 注意，如果我们设法恢复旧的失败主库，它将不会自动重新引入群集。我们需要手动完成。其中一个原因是，如果我们的副本在失败时被延迟，如果我们将旧主服务器添加到集群，则意味着信息丢失或跨节点的数据不一致。我们可能还想详细分析这个问题。如果我们只是将故障节点重新引入群集，我们可能会丢失诊断信息。此外，如果故障转移失败，则不再进行尝试。需要手动干预来分析问题并执行相应的操作。这是为了避免ClusterControl作为高可用性管理器尝试提升下一个奴隶和下一个奴隶的情况。
 
 **完成后状态：**
 
-![1551595247660](D:\github\blog\image\1551595247660.png)
+![image025](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image025.png)
 
 ### 添加slave节点
 
 如果我们想要在另一个数据中心添加一个从服务器，或者作为意外事件或者要迁移您的系统，我们可以转到Cluster Actions，然后选择Add Replication Slave。
 
-![1551595254620](D:\github\blog\image\1551595254620.png)
+![image026](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image026.png)
 
 我们需要输入一些基本数据，例如IP或主机名，数据目录（可选），同步或异步从站。我们应该让我们的slave节点在几秒钟后启动并运行。
 
