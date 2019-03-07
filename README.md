@@ -20,6 +20,7 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 
 ```
 ![img](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png)
+![img](https://github.com/willzhang/blog/raw/master/image/other/pgbouncer.png)
 ```
 
 # 使用方法2：
