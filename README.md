@@ -8,7 +8,7 @@ This folder is used to store blog pictures！
 
 图片路径如下：
 
-https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
+https://github.com/willzhang/image/raw/master/image/clustercontrol/image001.png
 
 粘贴进markdown格式如下：
 
@@ -19,7 +19,7 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 示例：
 
 ```
-![](https://github.com/willzhang/blog/raw/master/image/other/pgbouncer.png)
+![](https://github.com/willzhang/image/raw/master/image/other/pgbouncer.png)
 ```
 
 # 使用方法2：
