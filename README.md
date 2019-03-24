@@ -1,12 +1,14 @@
-# Blogimage
+# 说明
 
 This folder is used to store blog images！
 
-## 使用方法1：
+## 使用方法：
 
 访问图片，复制浏览器链接中的地址，替换blob为raw
+
 原始路径
 https://github.com/willzhang/image/blob/master/other/GitHub.jpg
+
 替换后路径
 https://github.com/willzhang/image/raw/master/other/GitHub.jpg
 
