@@ -19,7 +19,6 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 示例：
 
 ```
-![img](https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png)
 ![img](https://github.com/willzhang/blog/raw/master/image/other/pgbouncer.png)
 ```
 
