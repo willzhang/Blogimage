@@ -19,7 +19,7 @@ https://github.com/willzhang/blog/raw/master/image/clustercontrol/image001.png
 示例：
 
 ```
-![img](https://github.com/willzhang/blog/raw/master/image/other/pgbouncer.png)
+![](https://github.com/willzhang/blog/raw/master/image/other/pgbouncer.png)
 ```
 
 # 使用方法2：
