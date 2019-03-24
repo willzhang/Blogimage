@@ -1,40 +1,23 @@
 # Blogimage
 
-This folder is used to store blog pictures！
+This folder is used to store blog images！
 
-# 使用方法1：
+## 使用方法1：
 
-选择图片，复制图片路径，替换blob为raw
+访问图片，复制浏览器链接中的地址，替换blob为raw
+原始路径
+https://github.com/willzhang/image/blob/master/other/GitHub.jpg
+替换后路径
+https://github.com/willzhang/image/raw/master/other/GitHub.jpg
 
-图片路径如下：
-
-https://github.com/willzhang/image/raw/master/image/clustercontrol/image001.png
-
-粘贴进markdown格式如下：
-
+markdown示例：
 ```
+#说明
 ![图片描述](图片网址) 
+
+#示例1，注意替换other文件夹名称，以及图片名称
+![](https://github.com/willzhang/image/raw/master/other/GitHub.jpg)
+
+#示例2，右键图片获取链接直接使用即可
+![](https://github.com/willzhang/image/blob/master/other/GitHub.jpg?raw=true)
 ```
-
-示例：
-
-```
-![](https://github.com/willzhang/image/raw/master/image/other/pgbouncer.png)
-```
-
-# 使用方法2：
-
-直接在图片上右键，复制图片路径
-
-示例：
-
-```
-![img](https://github.com/zhwill/Blogimage/blob/master/openstack1.png?raw=true)
-```
-
-
-
-
-
-
-
