@@ -1,3 +1,11 @@
+cc
+jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 10.0.96.73)(PORT = 3527)) (ADDRESS = (PROTOCOL = TCP)(HOST = 10.0.96.75)(PORT = 3527)))(LOAD_BALANCE = ON)(FAILOVER = ON)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = tpi2hx)))
+
+
+cha
+jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.0.105.107)(PORT=3526))(CONNECT_DATA=(SERVER=dedicated)(SID=TPI3hx6)))
+
+
 # 说明
 
 This folder is used to store blog images！
